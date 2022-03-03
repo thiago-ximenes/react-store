@@ -12,8 +12,8 @@
   - git checkout develop && git checkout -b [seu-nome]-[nome-da-feature]
 
 ## Links dos deploys
-  1. Develop: https://react-store-thiago-ximenes.vercel.app/
-  2. Prod: 
+  1. Prod: https://react-store-develop.herokuapp.com/
+  2. Develop: https://react-store-thiago-ximenes.vercel.app/
 ##  API de consumo
 
 Nossa página _web_ irá consumir os dados da API do _Mercado Livre_ para realizar a busca de itens da sua loja online. Para realizar essas buscas, vocês precisarão consultar os seguintes _endpoints_:
