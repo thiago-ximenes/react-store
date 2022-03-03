@@ -3,13 +3,23 @@
 ## Git-flow
 
 1. A branch master será a branch de produção.
-  - Todo push nesta branch irá atualizar a aplicação em produção
+    - Todo push nesta branch irá atualizar a aplicação em produção.
 2. A branch develop é a branch de desenvolvimento.
-  - Todo push nesta branch irá atualizar a aplicação em desenvolvimento
+    - Todo push nesta branch irá atualizar a aplicação em desenvolvimento.
 
 ### Modelo de para trabalhar em uma nova feature
 
-  - git checkout develop && git checkout -b [seu-nome]-[nome-da-feature]
+  - git checkout develop && git checkout -b [seu-nome]-[nome-da-feature].
+
+### Modelo de pull request
+  - [Nome] [Nome da feature].
+
+## Testes
+  1. Todos os testes devem estar dentro da pasta tests dentro de src.
+      - /src/tests.
+  2. O teste deve estar dentro do arquivo do seu serviço
+      - se for uma requisição a API, dentro do teste de services.
+      - se for uma feature pra uma tela, dentro do arquivo com o nome da tela.
 
 ## Links dos deploys
   1. [Prod](https://react-store-develop.herokuapp.com/)
