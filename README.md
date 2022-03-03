@@ -3,12 +3,17 @@
 ## Git-flow
 
 1. A branch master será a branch de produção.
+  - Todo push nesta branch irá atualizar a aplicação em produção
 2. A branch develop é a branch de desenvolvimento.
+  - Todo push nesta branch irá atualizar a aplicação em desenvolvimento
 
 ### Modelo de para trabalhar em uma nova feature
 
   - git checkout develop && git checkout -b [seu-nome]-[nome-da-feature]
 
+## Links dos deploys
+  1. Develop: https://react-store-thiago-ximenes.vercel.app/
+  2. Prod: 
 ##  API de consumo
 
 Nossa página _web_ irá consumir os dados da API do _Mercado Livre_ para realizar a busca de itens da sua loja online. Para realizar essas buscas, vocês precisarão consultar os seguintes _endpoints_:
