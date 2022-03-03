@@ -22,8 +22,8 @@
       - se for uma feature pra uma tela, dentro do arquivo com o nome da tela.
 
 ## Links dos deploys
-  1. [Prod](https://react-store-develop.herokuapp.com/)
-  2. [Develop](https://react-store-thiago-ximenes.vercel.app/)
+  2. [Prod](https://react-store-thiago-ximenes.vercel.app/)
+  1. [Develop](https://react-store-develop.herokuapp.com/)
 ##  API de consumo
 
 Nossa página _web_ irá consumir os dados da API do _Mercado Livre_ para realizar a busca de itens da sua loja online. Para realizar essas buscas, vocês precisarão consultar os seguintes _endpoints_:
