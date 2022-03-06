@@ -27,10 +27,10 @@ jobs:
           node-version: 17
 
       - name: Install dependencies
-        run: yarn
+        run: rm -rf package-lock.json && yarn
 
-      - name: Run ESLint && Prettier
-        run: npm run style:lint && npm run style:prettier
+      - name: Run ESLint
+        run: npm run style:lint
 
 
       - name: Run linters
