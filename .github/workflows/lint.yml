@@ -5,9 +5,11 @@ on:
   # but only for the main branch
   push:
     branches:
+      - master
       - develop
   pull_request:
     branches:
+      - master
       - develop
 
 jobs:
@@ -23,10 +25,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 17
-
-      # ESLint and Prettier must be in `package.json`
-      - name: Install Node.js dependencies
-        run: npm ci
 
       - name: Run ESLint && Prettier
         run: npm run style:lint && npm run style:prettier
