@@ -4,6 +4,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "test": "jest",
     "build": "tsc && vite build",
     "preview": "vite preview",
     "style:lint": "eslint '**/*.{js,jsx,ts,tsx}'",
@@ -19,6 +20,13 @@
     "vite": "^2.8.0"
   },
   "devDependencies": {
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "@babel/preset-typescript": "^7.16.7",
+    "@testing-library/jest-dom": "^5.16.3",
+    "@testing-library/react": "^12.1.4",
+    "@testing-library/user-event": "^13.5.0",
+    "@types/jest": "^27.4.1",
     "@types/react": "^17.0.33",
     "@types/react-dom": "^17.0.10",
     "@types/styled-components": "^5.1.24",
@@ -34,6 +42,8 @@
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-react": "^7.29.2",
     "eslint-plugin-react-hooks": "^4.3.0",
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^27.5.1",
     "postcss": "^8.4.7",
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.23",
@@ -42,5 +52,12 @@
   },
   "resolutions": {
     "styled-components": "^5"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFileAfterEnv": ["<rootDir>/jest.setup.js"]
+  },
+  "moduleModuleMapper": {
+    "\\.(css|less|sass|scss)$": "identity-obj-proxy"
   }
 }
