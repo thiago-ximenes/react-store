@@ -53,10 +53,6 @@
   "resolutions": {
     "styled-components": "^5"
   },
-  "jest": {
-    "testEnvironment": "jsdom",
-    "setupFileAfterEnv": ["<rootDir>/jest.setup.js"]
-  },
   "moduleModuleMapper": {
     "\\.(css|less|sass|scss)$": "identity-obj-proxy"
   }

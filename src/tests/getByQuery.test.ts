@@ -4,8 +4,8 @@ import { getByQuery } from '../services/fetchData';
 jest.mock('axios');
 
 describe('Should test getByQuery fetching function ', () => {
-  it('Test if function is called', () => {
-    getByQuery('computador');
+  it('Test if function is called', async () => {
+    await getByQuery('computador');
 
     expect(axios.get).toHaveBeenCalled();
   });
