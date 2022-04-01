@@ -34,6 +34,7 @@ module.exports = {
     '@typescript-eslint',
   ],
   rules: {
+    'import/no-extraneous-dependencies': 'off',
     'react/function-component-definition': [
       2,
       {
