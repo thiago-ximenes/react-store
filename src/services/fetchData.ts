@@ -10,7 +10,7 @@ export async function getByQuery(query : string): Promise<object> {
   }
 }
 
-export async function getCategories() {
+export async function getCategories(): Promise<object> {
   try {
     const response = await axios.get('https://api.mercadolibre.com/sites/MLB/categories');
 
@@ -19,3 +19,5 @@ export async function getCategories() {
     return { err };
   }
 }
+
+// export async function getCategoryById(id: string) {}
