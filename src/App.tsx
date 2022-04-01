@@ -1,9 +1,7 @@
-import './App.css';
+import Routers from './routers';
 
 const App : React.FC = () => (
-  <div>
-    Start Project
-  </div>
+  <Routers />
 );
 
 export default App;
