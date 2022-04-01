@@ -29,3 +29,16 @@ export async function getCategoryById(id: string): Promise<object> {
     return { err };
   }
 }
+
+export async function getByQueryInCategory(
+  category: string,
+  query: string,
+): Promise<object> {
+  try {
+    const response = await axios.get(`https://api.mercadolibre.com/sites/MLB/search?category=${category}&q=${query}`);
+
+    return response.data.results;
+  } catch (err) {
+    return { err };
+  }
+}
