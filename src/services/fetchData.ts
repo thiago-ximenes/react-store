@@ -42,3 +42,13 @@ export async function getByQueryInCategory(
     return { err };
   }
 }
+
+export async function getByItem(id: string): Promise<object> {
+  try {
+    const response = await axios.get(`https://api.mercadolibre.com/items/${id}`);
+
+    return response.data.results;
+  } catch (err) {
+    return { err };
+  }
+}

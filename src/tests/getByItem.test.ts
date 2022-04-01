@@ -11,7 +11,7 @@ describe('Should test getByItem fetching function ', () => {
     expect(axios.get).toHaveBeenCalled();
   });
   it('Test if function was called with right parameter', () => {
-    const URL = 'https://api.mercadolibre.com/sites/MLB/search?category=MLB1803629273';
+    const URL = 'https://api.mercadolibre.com/items/MLB1803629273';
 
     expect(axios.get).toHaveBeenCalledWith(URL);
   });
