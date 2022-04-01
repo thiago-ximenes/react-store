@@ -1,17 +1,7 @@
-import styled from 'styled-components';
-import './App.css';
+import Routers from './routers';
 
-const App : React.FC = () => {
-  const Title = styled.h1`
-    color: red;
-    text-align: center;
-  `;
-
-  return (
-    <Title>
-      Start Project
-    </Title>
-  );
-};
+const App : React.FC = () => (
+  <Routers />
+);
 
 export default App;
