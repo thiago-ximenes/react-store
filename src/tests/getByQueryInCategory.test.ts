@@ -1,17 +1,17 @@
 import axios from 'axios';
-import { getCategoryById } from '../services/fetchData';
-import data from './__mocks__/getCategoriesById';
+import { getByQueryInCategory } from '../services/fetchData';
+import data from './__mocks__/getByQueryInCategory';
 
 jest.mock('axios');
 
-describe('Should test getCategoriesById fetching function ', () => {
+describe('Should test getByQueryInCategory fetching function ', () => {
   it('Test if function is called', async () => {
-    await getCategoryById('MLB5672');
+    await getByQueryInCategory('MLB5672', 'pneu');
 
     expect(axios.get).toHaveBeenCalled();
   });
   it('Test if function was called with right parameter', () => {
-    const URL = 'https://api.mercadolibre.com/sites/MLB/search?category=MLB5672';
+    const URL = 'https://api.mercadolibre.com/sites/MLB/search?category=MLB5672&q=pneu';
 
     expect(axios.get).toHaveBeenCalledWith(URL);
   });
@@ -19,7 +19,7 @@ describe('Should test getCategoriesById fetching function ', () => {
     (axios.get as jest.Mock).mockImplementationOnce(() => Promise
       .resolve({ data: { results: [] } }));
 
-    const response = await getCategoryById('MLB5672');
+    const response = await getByQueryInCategory('MLB5672', 'pneu');
 
     expect(typeof response).toBe('object');
   });
@@ -27,7 +27,7 @@ describe('Should test getCategoriesById fetching function ', () => {
     (axios.get as jest.Mock).mockImplementationOnce(() => Promise
       .resolve({ data: { results: data } }));
 
-    const result = await getCategoryById('MLB5672');
+    const result = await getByQueryInCategory('MLB5672', 'pneu');
 
     expect(result).toEqual(data);
   });

@@ -20,4 +20,12 @@ export async function getCategories(): Promise<object> {
   }
 }
 
-// export async function getCategoryById(id: string) {}
+export async function getCategoryById(id: string): Promise<object> {
+  try {
+    const response = await axios.get(`https://api.mercadolibre.com/sites/MLB/search?category=${id}`);
+
+    return response.data.results;
+  } catch (err) {
+    return { err };
+  }
+}
